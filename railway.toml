@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+
+[build.nixpacks]
+aptPackages = ["nodejs", "npm"]
+
+[deploy]
+startCommand = "npm install -g vite && npm run build && npx serve -s dist -l $PORT"
